@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+    <title>Add Task</title>
+</head>
+
+<body>
+    <div class="container my-5 p-5 border bg-light-blue">
+        <form>
+            <!-- Prevent implicit submission of the form -->
+            <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+
+            <!-- Task Text Input -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="task-text-input" placeholder="Enter Task">
+                <label for="taskinput">Task</label>
+            </div>
+
+            <!-- Task Due Date Input -->
+            <div class="form-floating my-3">
+                <input type="date" class="form-control" id="task-date-input" placeholder="Enter Due Date (Optional)">
+                <label for="task-date-input">Due Date (Optional)</label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="my-3">
+                <button type="button" onclick="addTask()" class="btn btn-outline-primary">Add Task</button>
+                <a href="index.html" class="btn btn-outline-danger">Cancel</a>
+            </div>
+
+            <!-- Error Message -->
+            <p id="add-task-error-message" class="text-danger"></p>
+        </form>
+    </div>
+</body>
+
+</html>
